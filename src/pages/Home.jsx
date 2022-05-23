@@ -60,8 +60,8 @@ export default function Home() {
           </StDivider>
 
           <StIntro>
-            안녕하세요. <br /> 사용자를 UX/UI를 고민하고 <br /> 항상 소통하며
-            애자일하게 일하는 <br /> 프론트엔드 개발자 김정훈입니다.{" "}
+            안녕하세요. <br /> 사용자의 입장에서 UX/UI를 고민하고 <br /> 항상
+            소통하며 애자일하게 일하는 <br /> 프론트엔드 개발자 김정훈입니다.{" "}
           </StIntro>
         </StHomeWrap>
       </StHomeMaster>

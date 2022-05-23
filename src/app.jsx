@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skiils from "./pages/Skills";
 
 const Wrap = styled.div`
   height: 100%;
@@ -22,6 +23,7 @@ function App() {
         <Header />
         <Home />
         <About />
+        <Skiils />
         <Footer />
       </Wrap>
     </BrowserRouter>
