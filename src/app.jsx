@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skiils from "./pages/Skills";
+import { useState } from "react";
 
 const Wrap = styled.div`
   height: 100%;
@@ -16,11 +17,15 @@ const Wrap = styled.div`
 `;
 
 function App() {
+  const [value, setValue] = useState("");
+  const valueHandler = (value) => {
+    setValue(value.target.value);
+  };
   return (
     <BrowserRouter>
       <Wrap>
         {" "}
-        <Header />
+        <Header valueHandler={valueHandler} setValue={setValue} value={value} />
         <Home />
         <About />
         <Skiils />

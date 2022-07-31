@@ -73,7 +73,7 @@ const StMenuText = styled.nav`
   }
 `;
 
-export default function Header() {
+export default function Header(valueHandler, setValue, value) {
   return (
     <>
       <StHeaderMaster>

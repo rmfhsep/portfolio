@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import js from "../images/js.png";
 
@@ -56,6 +57,7 @@ const SkillsList = styled.div`
   display: flex;
   align-items: center;
   box-shadow: 3px 3px 3px rgba(254, 254, 254, 0.2);
+  cursor: pointer;
 `;
 const SkillsImg = styled.img`
   margin-left: 10px;
@@ -69,6 +71,7 @@ const SkillsTitle = styled.div`
 `;
 
 export default function Skills() {
+  const [value, setValue] = useState("");
   return (
     <StBoxMaster>
       <StBoxWrap>
