@@ -93,8 +93,6 @@ export default function Skills() {
             </SkillsList>
           </SkiilsBox>
           <SkiilsBox>git remote 확인</SkiilsBox>
-          <SkiilsBox>git remote 확인</SkiilsBox>
-          <SkiilsBox>git remote 확인</SkiilsBox>
         </StAboutBox>
       </StBoxWrap>
     </StBoxMaster>
