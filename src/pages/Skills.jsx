@@ -71,7 +71,9 @@ const SkillsTitle = styled.div`
 `;
 
 export default function Skills() {
-  const [value, setValue] = useState("");
+  
+
+  
   return (
     <StBoxMaster>
       <StBoxWrap>
