@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const StHeaderMaster = styled.div`
   width: 80vw;
@@ -89,7 +88,7 @@ export default function Header(valueHandler, setValue, value) {
           <StMenuText>Skills</StMenuText>
           <StMenuText>Projects</StMenuText>
           <StMenuText>Contact</StMenuText>
-          <FontAwesomeIcon className="icon" icon={faBars} size={"2x"} />
+          {/* <FontAwesomeIcon className="icon" icon={faBars} size={"2x"} /> */}
         </StRightHeader>
       </StHeaderMaster>
     </>
