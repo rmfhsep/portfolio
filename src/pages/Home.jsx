@@ -9,7 +9,7 @@ const AnimationWrapper = styled.div`
 const Typing = styled.div`
   width: 15ch;
   animation: typing 2.5s steps(23), blink 2s step-end infinite alternate;
-  animation-iteration-count: infinite;
+
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -49,7 +49,7 @@ export default function Home() {
             An indefinite and homogeneous environment in which natural events
             and human existence take place.
           </p>
-          <div className="flex mt-8">
+          {/* <div className="flex mt-8">
             <a
               href="#"
               className="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400"
@@ -62,14 +62,14 @@ export default function Home() {
             >
               Read more
             </a>
-          </div>
+          </div> */}
         </div>
-        <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+        {/* <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
           <img
             src="/images/object/10.png"
             className="max-w-xs md:max-w-sm m-auto"
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
