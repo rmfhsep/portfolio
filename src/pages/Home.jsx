@@ -30,10 +30,10 @@ const Typing = styled.div`
 export default function Home() {
   return (
     <>
-      <div className="container p-16 flex relative">
+      <div className="container p-16 flex relative items-center min-h-screen">
         <div className="flex flex-col relative z-20">
           <span className="w-20 h-2 bg-gray-800 dark:bg-white mb-12"></span>
-          <h2 className="text-indigo-700">Hello!👋 My name is</h2>
+          <h2 className="text-indigo-700 text-xl">Hello!👋 My name is</h2>
           <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none text-white">
             Jung Hoon Kim
           </h1>

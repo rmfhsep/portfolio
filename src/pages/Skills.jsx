@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import js from "../images/js.png";
+// import js from "../images/js.png";
 
 const StBoxMaster = styled.div`
   width: 100%;
@@ -71,9 +71,6 @@ const SkillsTitle = styled.div`
 `;
 
 export default function Skills() {
-  
-
-  
   return (
     <StBoxMaster>
       <StBoxWrap>
@@ -82,15 +79,15 @@ export default function Skills() {
           <SkiilsBox>
             <SkillsName>Language</SkillsName>
             <SkillsList>
-              <SkillsImg src={js} />
+              {/* <SkillsImg src={js} /> */}
               <SkillsTitle>JavaScript</SkillsTitle>
             </SkillsList>
             <SkillsList>
-              <SkillsImg src={js} />
+              {/* <SkillsImg src={js} /> */}
               <SkillsTitle>HTML</SkillsTitle>
             </SkillsList>
             <SkillsList>
-              <SkillsImg src={js} />
+              {/* <SkillsImg src={js} /> */}
               <SkillsTitle>CSS</SkillsTitle>
             </SkillsList>
           </SkiilsBox>

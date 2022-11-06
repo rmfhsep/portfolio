@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-scroll";
 
 const StHeaderMaster = styled.div`
   width: 80vw;
@@ -75,7 +76,7 @@ const StMenuText = styled.nav`
 export default function Header(valueHandler, setValue, value) {
   return (
     <>
-      <header className="h-24 sm:h-32 flex items-center z-30 w-full">
+      <header className="h-24 sm:h-32 flex items-center z-30 w-full fixed bg-gray-800">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="uppercase text-gray-800 dark:text-white font-black text-3xl flex">
             <div class="z-50 w-9 sm:w-12 h-9 sm:h-12 flex items-center">
@@ -138,12 +139,17 @@ export default function Header(valueHandler, setValue, value) {
           </div>
           <div className="flex items-center">
             <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
-              <a href="#" className="py-2 px-6 flex">
-                Home
-              </a>
-              <a href="#" className="py-2 px-6 flex">
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                className="py-2 px-6 flex"
+              >
+                <a href="home">Home</a>
+              </Link>
+              <Link to="about" className="py-2 px-6 flex">
                 About
-              </a>
+              </Link>
               <a href="#" className="py-2 px-6 flex">
                 Skills
               </a>
