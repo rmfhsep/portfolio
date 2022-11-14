@@ -55,19 +55,14 @@ const StImg = styled.img`
 export default function About() {
   return (
     <>
-      <div className="container p-16 flex relative justify-center min-h-screen">
+      <div className="container p-16 flex relative min-h-screen">
         <div className="flex flex-col relative z-20">
-          <h1 className="font-bebas-neue uppercase sm:text-4xl font-black flex flex-col  text-white text-center">
-            about me
+          <h1 className="font-bebas-neue  sm:text-5xl font-black flex flex-col  text-white ">
+            About
           </h1>
+          <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
           <div className="flex flex-col lg:flex-row pt-10 w-full items-center">
             {" "}
-            <div>
-              <img
-                src="/images/profile.png"
-                className="h-56 w-56 rounded-full mr-10"
-              />
-            </div>
             <div>
               <p className="text-sm sm:text-2xl text-gray-700 dark:text-white my-8 break-keep">
                 디자이너로써 개발자와 협업하는 기회가 있었습니다. <br />그 때
@@ -90,21 +85,15 @@ export default function About() {
                 노력합니다.
               </p>
             </div>
+            <div>
+              <img
+                src="/images/profile.png"
+                className="h-56 w-56 rounded-md mr-10"
+              />
+            </div>
           </div>
         </div>
       </div>
-      {/* <StBoxMaster>
-        <StBoxWrap>
-          <StTitle>About Me</StTitle>
-          <StAboutBox>
-            <StText>
-              {" "}
-             
-            </StText>
-            <StImg src={profile} />
-          </StAboutBox>
-        </StBoxWrap>
-      </StBoxMaster> */}
     </>
   );
 }

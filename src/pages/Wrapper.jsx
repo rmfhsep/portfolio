@@ -1,6 +1,7 @@
 import Home from "./Home";
 import Header from "../components/Header";
 import About from "./About";
+import Skills from "./Skills";
 
 export default function Wrapper() {
   return (
@@ -12,6 +13,7 @@ export default function Wrapper() {
         <div className="bg-gray-800 relative z-20 items-center flex flex-col ">
           <Home name="home" />
           <About name="about" />
+          <Skills name="skills" />
         </div>
       </main>
     </>
