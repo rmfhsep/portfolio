@@ -43,7 +43,7 @@ export default function Home() {
             </Typing>
           </AnimationWrapper>
           {/* <span className="text-gray-300 sm:text-5xl">Frontend Developer</span> */}
-          <p className="text-sm sm:text-base text-gray-700 dark:text-white my-8">
+          <p className="text-sm sm:text-base text-gray-700 dark:text-white my-8 break-keep">
             문제를 발견하면, 끝까지 해결하려고 노력하는 엉덩이가 무거운
             프론트엔드 개발자 김정훈입니다. <br />
             코드만 짜는 개발자가 아닌 문제를 해결하는 개발자가 되기 위해
