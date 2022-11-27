@@ -138,7 +138,7 @@ export default function Header(valueHandler, setValue, value) {
             </div>
           </div>
           <div className="flex items-center">
-            <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+            <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center">
               <Link
                 to="home"
                 spy={true}
@@ -160,11 +160,11 @@ export default function Header(valueHandler, setValue, value) {
                 Contact
               </a>
             </nav>
-            <button className="lg:hidden flex flex-col ml-4">
+            {/* <button className="lg:hidden flex flex-col ml-4">
               <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
               <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
               <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-            </button>
+            </button> */}
           </div>
         </div>
       </header>
