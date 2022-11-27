@@ -2,6 +2,7 @@ import Home from "./Home";
 import Header from "../components/Header";
 import About from "./About";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 export default function Wrapper() {
   return (
@@ -14,6 +15,7 @@ export default function Wrapper() {
           <Home name="home" />
           <About name="about" />
           <Skills name="skills" />
+          <Projects />
         </div>
       </main>
     </>
