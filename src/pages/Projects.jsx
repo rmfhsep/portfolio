@@ -228,19 +228,20 @@ export default function Projects() {
                     >
                       HTML
                     </p>
-                    <div className="sm:w-12 w-10 ml-4">
+                    <div className="sm:w-12 w-10 ml-7">
                       <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                         <path
                           className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
-                          d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063L108.33 26H19.67zm69.21 50.488L86.53 98.38l.009 1.875L64 106.55v.001l-.018.015-22.719-6.225L39.726 83h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495L77.702 77H51.795l-.222-2.355-.506-5.647L50.802 66h27.886l1.014-11H37.229l-.223-2.589-.506-6.03L36.235 43h55.597l-.267 3.334-2.685 30.154M89 14.374L81.851 6H89V1H73v4.363L81.39 13H73v5h16zm-19 0L63.193 6H70V1H55v4.363L62.733 13H55v5h15zM52 13h-8V6h8V1H38v17h14z"
+                          d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+                          fill="#38b2ac"
                         ></path>
                       </svg>
                     </div>
                     <p
                       style={{ color: "#a2a1a6" }}
-                      className="text-sm sm:text-base font-semibold tracking-wide hidden sm:block"
+                      className="ml-2 text-sm sm:text-base font-semibold tracking-wide hidden sm:block"
                     >
-                      CSS
+                      Tailwind
                     </p>
                   </div>
                   <div className="flex items-center mt-4">
@@ -304,7 +305,7 @@ export default function Projects() {
                           style={{ color: "#a2a1a6" }}
                           className="font-semibold opacity-70 group-hover:opacity-100"
                         >
-                          Notion
+                          Live
                         </p>
                       </button>
                     </a>
