@@ -9,6 +9,7 @@ import Skiils from "./pages/Skills";
 import { useState } from "react";
 import Spinner from "./shared/Spinner";
 import Wrapper from "./pages/Wrapper";
+import { Link } from "react-scroll";
 
 const Wrap = styled.div`
   height: 100%;
