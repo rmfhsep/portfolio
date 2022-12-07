@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Contact from "./Contact";
+import Footer from "../components/Footer";
 
 export default function Wrapper() {
   return (
@@ -19,6 +20,7 @@ export default function Wrapper() {
           <Skills name="skills" />
           <Projects name="projects" />
           <Contact name="contact" />
+          <Footer />
         </div>
         <div className="fixed bottom-0 z-30 w-full">
           <div className="container relative flex h-full mx-auto">
