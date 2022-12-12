@@ -15,10 +15,7 @@ export default function Wrapper() {
         <Header />
         {/* 내용 */}
         <div className="bg-gray-800 relative z-20 items-center flex flex-col w-full snap-y">
-          <Link to="home" spy={true} smooth={true}>
-            <Home name="home" />
-          </Link>
-
+          <Home name="home" />
           <About name="about" />
           <Skills name="skills" />
           <Projects name="projects" />
