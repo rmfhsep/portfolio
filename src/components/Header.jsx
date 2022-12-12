@@ -139,20 +139,15 @@ export default function Header(valueHandler, setValue, value) {
           </div>
           <div className="flex items-center">
             <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center">
-              <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                className="py-2 px-6 flex"
-              >
-                <a href="home">Home</a>
-              </Link>
-              <Link to="about" className="py-2 px-6 flex">
+              <div id="home" className="py-2 px-6 flex">
+                Home
+              </div>
+              <div id="about" className="py-2 px-6 flex">
                 About
-              </Link>
-              <a href="#" className="py-2 px-6 flex">
+              </div>
+              <div id="skills" className="py-2 px-6 flex">
                 Skills
-              </a>
+              </div>
               <a href="#" className="py-2 px-6 flex">
                 Projects
               </a>

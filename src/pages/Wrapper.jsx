@@ -3,9 +3,9 @@ import Header from "../components/Header";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Contact from "./Contact";
 import Footer from "../components/Footer";
+import { Link } from "react-scroll";
 
 export default function Wrapper() {
   return (
@@ -14,8 +14,11 @@ export default function Wrapper() {
         {/* 헤더 */}
         <Header />
         {/* 내용 */}
-        <div className="bg-gray-800 relative z-20 items-center flex flex-col w-full">
-          <Home name="home" />
+        <div className="bg-gray-800 relative z-20 items-center flex flex-col w-full snap-y">
+          <Link to="home" spy={true} smooth={true}>
+            <Home name="home" />
+          </Link>
+
           <About name="about" />
           <Skills name="skills" />
           <Projects name="projects" />

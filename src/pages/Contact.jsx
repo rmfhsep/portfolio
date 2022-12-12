@@ -12,11 +12,18 @@ export default function Footer() {
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
           <div className="w-full flex flex-col justify-center mt-10">
             <p style={{ color: "#a2a6a1" }} class="text-lg">
-              꾸준히 성장해 나가며, 문제를 해결하는 개발자가 되기 위해
-              노력합니다.
+              문제 해결을 위해 항상 고민하며, 꾸준히 매일 매일 성장하는 개발자
+              김정훈입니다.
               <br />
-              rmfhsep@gmail.com
             </p>
+            <a
+              href="mailto:rmfhsep@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-indigo-500 text-xl hover:text-white hover:cursor-pointer hover:underline underline-offset-4 decoration-indigo-500"
+            >
+              rmfhsep@gmail.com
+            </a>
           </div>
         </div>
       </div>
