@@ -228,7 +228,7 @@ export default function Projects() {
                     >
                       HTML
                     </p>
-                    <div className="sm:w-12 w-10 ml-7">
+                    <div className="sm:w-12 w-10 ml-3">
                       <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                         <path
                           className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
