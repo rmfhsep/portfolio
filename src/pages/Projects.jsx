@@ -1,7 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useState } from "react";
 
-export default function Projects() {
+// Todo. 작은화면일 때 flex col 로 바꾸기.
+function Projects() {
   return (
     <>
       <div className="container p-16 flex relative min-h-screen">
@@ -17,11 +18,11 @@ export default function Projects() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1376 80"
-                    class="w-full text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md"
+                    className="w-full text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md"
                   >
                     <g data-name="TOP BAR">
                       <rect
-                        class="text-white fill-current"
+                        className="text-white fill-current"
                         width="1376"
                         height="80"
                       ></rect>
@@ -31,19 +32,19 @@ export default function Projects() {
                       data-name="BUTTONS"
                     >
                       <circle
-                        class="text-red-400 fill-current"
+                        className="text-red-400 fill-current"
                         cx="37"
                         cy="40"
                         r="11"
                       ></circle>
                       <circle
-                        class="text-yellow-400 fill-current"
+                        className="text-yellow-400 fill-current"
                         cx="71"
                         cy="40"
                         r="11"
                       ></circle>
                       <circle
-                        class="text-green-400 fill-current"
+                        className="text-green-400 fill-current"
                         cx="105"
                         cy="40"
                         r="11"
@@ -143,9 +144,9 @@ export default function Projects() {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                           ></path>
                         </svg>
@@ -168,11 +169,11 @@ export default function Projects() {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1376 80"
-                    class="w-full text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md"
+                    className="w-full text-white border-b fill-current border-soft rounded-tl-md rounded-tr-md"
                   >
                     <g data-name="TOP BAR">
                       <rect
-                        class="text-white fill-current"
+                        className="text-white fill-current"
                         width="1376"
                         height="80"
                       ></rect>
@@ -182,19 +183,19 @@ export default function Projects() {
                       data-name="BUTTONS"
                     >
                       <circle
-                        class="text-red-400 fill-current"
+                        className="text-red-400 fill-current"
                         cx="37"
                         cy="40"
                         r="11"
                       ></circle>
                       <circle
-                        class="text-yellow-400 fill-current"
+                        className="text-yellow-400 fill-current"
                         cx="71"
                         cy="40"
                         r="11"
                       ></circle>
                       <circle
-                        class="text-green-400 fill-current"
+                        className="text-green-400 fill-current"
                         cx="105"
                         cy="40"
                         r="11"
@@ -295,9 +296,9 @@ export default function Projects() {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                           ></path>
                         </svg>
@@ -319,3 +320,4 @@ export default function Projects() {
     </>
   );
 }
+export default Projects;

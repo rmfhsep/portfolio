@@ -79,7 +79,7 @@ export default function Header(valueHandler, setValue, value) {
       <header className="h-24 sm:h-32 flex items-center z-30 w-full fixed bg-gray-800">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="uppercase text-gray-800 dark:text-white font-black text-3xl flex">
-            <div class="z-50 w-9 sm:w-12 h-9 sm:h-12 flex items-center">
+            <div className="z-50 w-9 sm:w-12 h-9 sm:h-12 flex items-center">
               <svg
                 id="b613d120-e911-4f71-b7bc-d9b9e1bbdc6f"
                 data-name="Layer 1"
@@ -87,7 +87,7 @@ export default function Header(valueHandler, setValue, value) {
                 viewBox="0 0 93.13 75.2"
               >
                 <rect
-                  class="fill-current text-brand"
+                  className="fill-current text-brand"
                   x="-3.43"
                   y="39.29"
                   width="32.19"
@@ -96,7 +96,7 @@ export default function Header(valueHandler, setValue, value) {
                   transform="translate(-27.18 21.75) rotate(-45)"
                 ></rect>
                 <rect
-                  class="fill-current text-brand"
+                  className="fill-current text-brand"
                   x="-3.43"
                   y="22.74"
                   width="32.19"
@@ -105,7 +105,7 @@ export default function Header(valueHandler, setValue, value) {
                   transform="translate(22.89 -1.01) rotate(45)"
                 ></rect>
                 <rect
-                  class="fill-current text-brand"
+                  className="fill-current text-brand"
                   x="64.37"
                   y="22.74"
                   width="32.19"
@@ -114,7 +114,7 @@ export default function Header(valueHandler, setValue, value) {
                   transform="translate(156.55 -10.59) rotate(135)"
                 ></rect>
                 <rect
-                  class="fill-current text-brand"
+                  className="fill-current text-brand"
                   x="64.37"
                   y="39.29"
                   width="32.19"
@@ -123,7 +123,7 @@ export default function Header(valueHandler, setValue, value) {
                   transform="translate(106.48 131.47) rotate(-135)"
                 ></rect>
                 <rect
-                  class="fill-current text-brand"
+                  className="fill-current text-brand"
                   x="41.93"
                   y="-1.17"
                   width="8.78"
