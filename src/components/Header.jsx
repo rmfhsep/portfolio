@@ -8,8 +8,19 @@ export default function Header({ handleClick }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = useState(false);
 
-  const menuHandleClick = (event) => {
+  const menuHandleClick = (type) => {
     setOpen(!open);
+    if (type === "home") {
+      handleClick("home");
+    } else if (type === "about") {
+      handleClick("about");
+    } else if (type === "skills") {
+      handleClick("skills");
+    } else if (type === "projects") {
+      handleClick("projects");
+    } else if (type === "contact") {
+      handleClick("contact");
+    }
   };
   const handleClose = () => {
     setOpen(!open);
@@ -79,39 +90,39 @@ export default function Header({ handleClick }) {
             </div>
           </div>
           <div className="flex items-center">
-            <nav className="hidden lg:block font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center">
+            <nav className="hidden sm:block font-sen text-gray-800 dark:text-white uppercase text-lg sm:text-base sm:flex items-center">
               <div
                 onClick={() => handleClick("home")}
-                className="py-2 px-6 flex cursor-pointer"
+                className="py-2 md:px-6 px-1 flex cursor-pointer"
               >
                 Home
               </div>
               <div
                 onClick={() => handleClick("about")}
-                className="py-2 px-6 flex cursor-pointer"
+                className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 About
               </div>
               <div
                 onClick={() => handleClick("skills")}
-                className="py-2 px-6 flex cursor-pointer"
+                className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 Skills
               </div>
               <a
                 onClick={() => handleClick("projects")}
-                className="py-2 px-6 flex cursor-pointer"
+                className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 Projects
               </a>
               <a
                 onClick={() => handleClick("contact")}
-                className="py-2 px-6 flex cursor-pointer"
+                className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 Contact
               </a>
             </nav>
-            <div className="lg:hidden  ml-4">
+            <div className="sm:hidden">
               <Button
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
@@ -120,31 +131,44 @@ export default function Header({ handleClick }) {
                 onClick={menuHandleClick}
               >
                 <div className="flex flex-col">
-                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
+                  <span className="w-6 h-1  bg-white mb-1"></span>
+                  <span className="w-6 h-1  bg-white mb-1"></span>
+                  <span className="w-6 h-1 bg-white mb-1"></span>
                 </div>
               </Button>
               <Menu
-                style={{}}
+                className="lg:hidden"
+                style={{ marginTop: "50px" }}
                 id="basic-menu"
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
                 keepMounted
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "center",
+                  vertical: "top",
+                  horizontal: "right",
                 }}
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "center",
+                  horizontal: "right",
                 }}
                 getContentAnchorEl={null}
               >
-                <MenuItem onClick={menuHandleClick}>Profile</MenuItem>
-                <MenuItem onClick={menuHandleClick}>My account</MenuItem>
-                <MenuItem onClick={menuHandleClick}>Logout</MenuItem>
+                <MenuItem onClick={() => menuHandleClick("home")}>
+                  HOME
+                </MenuItem>
+                <MenuItem onClick={() => menuHandleClick("about")}>
+                  ABOUT
+                </MenuItem>
+                <MenuItem onClick={() => menuHandleClick("skills")}>
+                  SKILLS
+                </MenuItem>
+                <MenuItem onClick={() => menuHandleClick("projects")}>
+                  PROJECTS
+                </MenuItem>
+                <MenuItem onClick={() => menuHandleClick("contact")}>
+                  CONTACT
+                </MenuItem>
               </Menu>
             </div>
           </div>
