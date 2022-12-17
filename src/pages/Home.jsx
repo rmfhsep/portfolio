@@ -1,70 +1,85 @@
 import React from "react";
+import { forwardRef } from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const StHomeMaster = styled.div`
-  width: 100vw;
-  display: flex;
-  background: #171717;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+const AnimationWrapper = styled.div`
+  display: grid;
+  place-items: start;
 `;
 
-const StHomeWrap = styled.div`
-  width: 80%;
-  padding: 50px;
-  display: table-cell;
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-`;
+const Typing = styled.div`
+  width: 14.5ch;
+  animation: typing 2.5s steps(23), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
 
-const StName = styled.div`
-  text-align: center;
-  padding: 20px;
-  font-size: 4rem;
-  font-family: "SBAggroB";
-  color: white;
-`;
-const StDivider = styled.div`
-  text-align: center;
-  padding: 20px;
-  .divider {
-    width: 3.25rem;
-    height: 0;
-    margin: 1.5rem auto;
-    border: none;
-    border-top: 0.2rem solid white;
-    opacity: 0.7;
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 `;
-const StIntro = styled.div`
-  text-align: center;
-  padding: 20px;
-  font-size: 1.25rem;
-  color: #ffffffbf;
-`;
 
-export default function Home() {
+function Home({ props }, ref) {
   return (
     <>
-      <StHomeMaster>
-        <StHomeWrap>
-          <StName>
-            프론트엔드 개발자
-            <br /> 김정훈입니다.
-          </StName>
-          <StDivider>
-            <hr className="divider" />
-          </StDivider>
-
-          <StIntro>
-            안녕하세요. <br /> 사용자의 입장에서 UX/UI를 고민하고 <br /> 항상
-            소통하며 애자일하게 일하는 <br /> 프론트엔드 개발자 김정훈입니다.{" "}
-          </StIntro>
-        </StHomeWrap>
-      </StHomeMaster>
+      <div
+        ref={ref}
+        className="container p-16 flex relative items-center min-h-screen"
+      >
+        <div className="flex flex-col relative z-20">
+          <span className="w-20 h-2 bg-gray-800 dark:bg-white mb-12"></span>
+          <h2 className="text-indigo-700 text-xl">Hello!👋 My name is</h2>
+          <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none text-white">
+            Jung Hoon Kim
+          </h1>
+          <AnimationWrapper>
+            <Typing className="text-gray-300 sm:text-5xl">
+              Frontend Developer.
+            </Typing>
+          </AnimationWrapper>
+          {/* <span className="text-gray-300 sm:text-5xl">Frontend Developer</span> */}
+          <p
+            style={{ color: "#a2a6a1" }}
+            className="text-sm sm:text-base my-8 break-keep"
+          >
+            문제를 발견하면, 끝까지 해결하려고 노력하는 엉덩이가 무거운
+            프론트엔드 개발자 김정훈입니다. <br />
+            코드만 짜는 개발자가 아닌 문제를 해결하는 개발자가 되기 위해
+            노력하고 있습니다. <br />
+            그러기 위해서, 커뮤니케이션을 무엇보다 중요시 생각합니다.
+          </p>
+          {/* <div className="flex mt-8">
+            <a
+              href="#"
+              className="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400"
+            >
+              Get started
+            </a>
+            <a
+              href="#"
+              className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md"
+            >
+              Read more
+            </a>
+          </div> */}
+        </div>
+        {/* <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+          <img
+            src="/images/object/10.png"
+            className="max-w-xs md:max-w-sm m-auto"
+          />
+        </div> */}
+      </div>
     </>
   );
 }
+export default forwardRef(Home);

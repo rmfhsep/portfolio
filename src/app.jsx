@@ -1,19 +1,21 @@
-import "./App.css";
+import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import axios from "axios";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skiils from "./pages/Skills";
 import { useState } from "react";
+import Spinner from "./shared/Spinner";
+import Wrapper from "./pages/Wrapper";
+import { Link } from "react-scroll";
 
 const Wrap = styled.div`
   height: 100%;
   position: relative;
   width: 100%;
-  font-family: "JSDongkang-Regular";
+  font-family: "SBAggroM";
 `;
 
 function App() {
@@ -22,16 +24,23 @@ function App() {
     setValue(value.target.value);
   };
   return (
-    <BrowserRouter>
-      <Wrap>
-        {" "}
-        <Header valueHandler={valueHandler} setValue={setValue} value={value} />
-        <Home />
-        <About />
-        <Skiils />
-        <Footer />
-      </Wrap>
-    </BrowserRouter>
+    <Suspense fallback={<Spinner />}>
+      <BrowserRouter>
+        <Wrapper></Wrapper>
+        {/* <Wrap>
+          {" "}
+          <Header
+            valueHandler={valueHandler}
+            setValue={setValue}
+            value={value}
+          />
+          <Home />
+          <About />
+          <Skiils />
+          <Footer />
+        </Wrap> */}
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
