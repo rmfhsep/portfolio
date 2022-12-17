@@ -1,79 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-scroll";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
-const StHeaderMaster = styled.div`
-  width: 80vw;
-  height: 70px;
-  position: fixed;
-  opacity: 0.9;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .icon {
-    display: none;
-    width: 100%;
-    color: gray;
-    cursor: pointer;
-    :hover {
-      color: black;
-    }
-  }
-  @media all and (max-width: 768px) {
-    .icon {
-      display: inline-block;
-      justify-content: flex-end;
-      margin-left: 80px;
-    }
-  }
-`;
+export default function Header({ handleClick }) {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = useState(false);
 
-const StLeftHeader = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 800;
-  cursor: pointer;
-  color: gray;
-  :hover {
-    color: black;
-  }
-  @media all and (max-width: 768px) {
-    font-size: 1.5rem;
-    width: 80%;
-  }
-`;
-const StRightHeader = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-`;
+  const menuHandleClick = (event) => {
+    setOpen(!open);
+  };
+  const handleClose = () => {
+    setOpen(!open);
+  };
 
-const StMenuText = styled.nav`
-  width: 20%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: gray;
-  cursor: pointer;
-  font-size: 1rem;
-  :hover {
-    color: black;
-  }
-  @media all and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export default function Header(valueHandler, setValue, value) {
   return (
     <>
       <header className="h-24 sm:h-32 flex items-center z-30 w-full fixed bg-gray-800">
@@ -138,28 +79,74 @@ export default function Header(valueHandler, setValue, value) {
             </div>
           </div>
           <div className="flex items-center">
-            <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center">
-              <div id="home" className="py-2 px-6 flex">
+            <nav className="hidden lg:block font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center">
+              <div
+                onClick={() => handleClick("home")}
+                className="py-2 px-6 flex cursor-pointer"
+              >
                 Home
               </div>
-              <div id="about" className="py-2 px-6 flex">
+              <div
+                onClick={() => handleClick("about")}
+                className="py-2 px-6 flex cursor-pointer"
+              >
                 About
               </div>
-              <div id="skills" className="py-2 px-6 flex">
+              <div
+                onClick={() => handleClick("skills")}
+                className="py-2 px-6 flex cursor-pointer"
+              >
                 Skills
               </div>
-              <a href="#" className="py-2 px-6 flex">
+              <a
+                onClick={() => handleClick("projects")}
+                className="py-2 px-6 flex cursor-pointer"
+              >
                 Projects
               </a>
-              <a href="#" className="py-2 px-6 flex">
+              <a
+                onClick={() => handleClick("contact")}
+                className="py-2 px-6 flex cursor-pointer"
+              >
                 Contact
               </a>
             </nav>
-            {/* <button className="lg:hidden flex flex-col ml-4">
-              <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-              <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-              <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
-            </button> */}
+            <div className="lg:hidden  ml-4">
+              <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={menuHandleClick}
+              >
+                <div className="flex flex-col">
+                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
+                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
+                  <span className="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
+                </div>
+              </Button>
+              <Menu
+                style={{}}
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                keepMounted
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "center",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "center",
+                }}
+                getContentAnchorEl={null}
+              >
+                <MenuItem onClick={menuHandleClick}>Profile</MenuItem>
+                <MenuItem onClick={menuHandleClick}>My account</MenuItem>
+                <MenuItem onClick={menuHandleClick}>Logout</MenuItem>
+              </Menu>
+            </div>
           </div>
         </div>
       </header>

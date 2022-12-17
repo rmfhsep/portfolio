@@ -1,10 +1,11 @@
 import React from "react";
+import { forwardRef } from "react";
 import { useState } from "react";
 
-export default function Footer() {
+function Footer({ props }, ref) {
   return (
     <>
-      <div className="container p-16 flex relative ">
+      <div ref={ref} className="container p-16 flex relative ">
         <div className="w-full flex flex-col relative z-20">
           <h1 className="font-bebas-neue  text-5xl font-black flex flex-col  text-white ">
             Contact
@@ -30,3 +31,4 @@ export default function Footer() {
     </>
   );
 }
+export default forwardRef(Footer);

@@ -8,29 +8,47 @@ import Footer from "../components/Footer";
 import { Link } from "react-scroll";
 import { forwardRef, useRef } from "react";
 
-export default function Wrapper() {
-  // const homeRef = forwardRef(null);
-  // const aboutRef = forwardRef(null);
-  // const skillsRef = forwardRef(null);
-  // const projectsRef = useRef();
-  // const contact = forwardRef(null);
+function Wrapper() {
+  const homeRef = useRef();
+  const aboutRef = useRef();
+  const skillsRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
 
-  // const handleClick = () => {
-  //   projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-  // };
+  const handleClick = (type) => {
+    const headerOffset = 64;
+    let elementPosition;
+    if (type === "home") {
+      elementPosition = homeRef.current.offsetTop - headerOffset;
+    } else if (type === "about") {
+      elementPosition = aboutRef.current.offsetTop - headerOffset;
+    } else if (type === "skills") {
+      elementPosition = skillsRef.current.offsetTop - headerOffset;
+    } else if (type === "projects") {
+      elementPosition = projectsRef.current.offsetTop - headerOffset;
+    } else {
+      elementPosition = contactRef.current.offsetTop - headerOffset;
+    }
+    const offsetPosition = elementPosition;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       <main className="bg-gray-800 bg-repeat relative h-screen">
         {/* 헤더 */}
-        <Header />
+        <Header handleClick={handleClick} />
         {/* 내용 */}
         <div className="bg-gray-800 relative z-20 items-center flex flex-col w-full snap-y">
-          <Home name="home" />
-          <About name="about" />
-          <Skills name="skills" />
-          <Projects name="projects" />
-          <Contact name="contact" />
+          <Home ref={homeRef} name="home" />
+          <About ref={aboutRef} name="about" />
+          <Skills ref={skillsRef} name="skills" />
+          <Projects ref={projectsRef} name="projects" />
+          <Contact ref={contactRef} name="contact" />
           <Footer />
         </div>
         <div className="fixed bottom-0 z-30 w-full">
@@ -97,3 +115,4 @@ export default function Wrapper() {
     </>
   );
 }
+export default forwardRef(Wrapper);

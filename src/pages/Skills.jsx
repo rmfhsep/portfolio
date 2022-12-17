@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useState } from "react";
 
-export default function Skills() {
+function Skills({ props }, ref) {
   return (
     <>
-      <div className="container p-16 flex relative min-h-screen">
+      <div ref={ref} className="container p-16 flex relative min-h-screen">
         <div className="w-full flex flex-col relative z-20">
           <h1 className="font-bebas-neue  text-5xl font-black flex flex-col  text-white ">
             Skills
@@ -187,3 +187,4 @@ export default function Skills() {
     </>
   );
 }
+export default forwardRef(Skills);

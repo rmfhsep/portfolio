@@ -1,4 +1,5 @@
 import React from "react";
+import { forwardRef } from "react";
 import styled from "styled-components";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -52,10 +53,10 @@ const StImg = styled.img`
   box-shadow: 5px 5px 5px gray;
 `;
 
-export default function About() {
+function About({ props }, ref) {
   return (
     <>
-      <div className="container p-16 flex relative min-h-screen">
+      <div ref={ref} className="container p-16 flex relative min-h-screen">
         <div className="flex flex-col relative z-20">
           <h1 className="font-bebas-neue  text-5xl font-black flex flex-col  text-white ">
             About
@@ -109,3 +110,4 @@ export default function About() {
     </>
   );
 }
+export default forwardRef(About);

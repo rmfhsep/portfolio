@@ -1,4 +1,5 @@
 import React from "react";
+import { forwardRef } from "react";
 import styled from "styled-components";
 
 const AnimationWrapper = styled.div`
@@ -27,10 +28,13 @@ const Typing = styled.div`
   }
 `;
 
-export default function Home() {
+function Home({ props }, ref) {
   return (
     <>
-      <div className="container p-16 flex relative items-center min-h-screen">
+      <div
+        ref={ref}
+        className="container p-16 flex relative items-center min-h-screen"
+      >
         <div className="flex flex-col relative z-20">
           <span className="w-20 h-2 bg-gray-800 dark:bg-white mb-12"></span>
           <h2 className="text-indigo-700 text-xl">Hello!👋 My name is</h2>
@@ -78,3 +82,4 @@ export default function Home() {
     </>
   );
 }
+export default forwardRef(Home);

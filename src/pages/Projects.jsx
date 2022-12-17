@@ -1,13 +1,16 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, Fragment, useRef } from "react";
 import { useState } from "react";
 
 // Todo. 작은화면일 때 flex col 로 바꾸기.
-function Projects() {
+function Projects({ props }, ref) {
   return (
     <>
-      <div className="container p-16 flex relative min-h-screen">
+      <div
+        ref={ref}
+        className="container p-16 flex relative min-h-screen scroll-my-0.5"
+      >
         <div className="w-full flex flex-col relative z-20">
-          <h1 className="font-bebas-neue  text-5xl font-black flex flex-col  text-white ">
+          <h1 className="font-bebas-neue text-5xl font-black flex flex-col  text-white">
             My Projects
           </h1>
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
@@ -202,7 +205,10 @@ function Projects() {
                       ></circle>
                     </g>
                   </svg>
-                  <img style={{ height: "250px" }} src="./images/문고리.gif" />
+                  <img
+                    style={{ height: "250px" }}
+                    src="./images/portfolio.gif"
+                  />
                 </div>
               </div>
               <div className="w-2/5">
@@ -320,4 +326,4 @@ function Projects() {
     </>
   );
 }
-export default Projects;
+export default forwardRef(Projects);
