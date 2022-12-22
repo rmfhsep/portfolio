@@ -322,7 +322,7 @@ function Projects({ props }, ref) {
               </div>
             </div>
             {/* 세번째 */}
-            <div className="mt-10 flex box-border w-full p-3.5 bg-gray-700 rounded-md shadow-md shadow-light/10">
+            {/* <div className="mt-10 flex box-border w-full p-3.5 bg-gray-700 rounded-md shadow-md shadow-light/10">
               <div className="w-3/5 box-border flex flex-col sm:flex-row justify-center items-center">
                 <div className="w-9/12 mt-10 mb-10 flex flex-col rounded-md border-shadow">
                   <svg
@@ -471,7 +471,7 @@ function Projects({ props }, ref) {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
