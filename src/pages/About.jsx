@@ -81,7 +81,7 @@ function About({ props }, ref) {
                 style={{ color: "#a2a6a1" }}
               >
                 그 설렘은 저에게 개발에 대한 열정을 갖게 해 주었고, <br />
-                프론트엔드 개발자로써의 첫 발을 내딛게 해주었습니다.
+                지금의 저를 만들어 주었습니다.
               </p>
               <p
                 className="text-base sm:text-xl my-8 break-keep"
@@ -89,6 +89,8 @@ function About({ props }, ref) {
               >
                 문제에 직면하는 것을 두려워 하지 않고, <br />그 문제를 해결하기
                 위한 방법을 고민하는 개발자가 되기 위해 항상 고민합니다.
+                <br />
+                문제 해결을 위한 새로운 기술 도입을 적극 환영합니다.
               </p>
               <p
                 className="ttext-base sm:text-xl  my-8 break-keep"
