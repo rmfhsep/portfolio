@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-import { useState } from "react";
 
 function Skills({ props }, ref) {
   return (
