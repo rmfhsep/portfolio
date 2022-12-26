@@ -4,7 +4,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function Header({ handleClick }) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const anchorEl = null;
   const [open, setOpen] = useState(false);
 
   const menuHandleClick = (type) => {
