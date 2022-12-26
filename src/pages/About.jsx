@@ -1,57 +1,5 @@
 import React from "react";
 import { forwardRef } from "react";
-import styled from "styled-components";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const StBoxMaster = styled.div`
-  width: 100vw;
-  display: flex;
-  background: white;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;
-const StBoxWrap = styled.div`
-  width: 80%;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-`;
-
-const StTitle = styled.div`
-  width: 20%;
-  height: 50px;
-  border-bottom: 1px solid gray;
-  font-size: 2rem;
-  text-align: center;
-  font-family: "SBAggroB";
-`;
-
-const StAboutBox = styled.div`
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const StText = styled.div`
-  width: 60%;
-  font-size: 1.511rem;
-  line-height: 2.3rem;
-`;
-const StImg = styled.img`
-  margin-left: 20px;
-  width: 40%;
-  max-width: 400px;
-  height: 500px;
-  object-fit: fill;
-  border: 1px solid gray;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px gray;
-`;
 
 function About({ props }, ref) {
   return (

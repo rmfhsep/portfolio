@@ -1,5 +1,4 @@
-import React, { forwardRef, Fragment, useRef } from "react";
-import { useState } from "react";
+import React, { forwardRef } from "react";
 
 // Todo. 작은화면일 때 flex col 로 바꾸기.
 function Projects({ props }, ref) {
