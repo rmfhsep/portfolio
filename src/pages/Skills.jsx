@@ -143,7 +143,7 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="w-1/5 sm:mt-10 mt-4 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="sm:mt-10 mt-4 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
               >
                 Express
               </p>
