@@ -32,15 +32,6 @@ function About({ props }, ref) {
                 지금의 저를 만들어 주었습니다.
               </p>
               <p
-                className="text-base sm:text-xl my-8 break-keep"
-                style={{ color: "#a2a6a1" }}
-              >
-                문제에 직면하는 것을 두려워 하지 않고, <br />그 문제를 해결하기
-                위한 방법을 고민하는 개발자가 되기 위해 항상 고민합니다.
-                <br />
-                문제 해결을 위한 새로운 기술 도입을 적극 환영합니다.
-              </p>
-              <p
                 className="ttext-base sm:text-xl  my-8 break-keep"
                 style={{ color: "#a2a6a1" }}
               >
@@ -49,6 +40,17 @@ function About({ props }, ref) {
                 팀의 목적 달성을 위해 상황에 맞게 유연하게 대응하고 <br /> 목표
                 달성을 위해서라면 끈기 있게 문제를 파고들어 해결하려고
                 노력합니다.
+              </p>
+              <p
+                className="text-base sm:text-xl my-8 break-keep"
+                style={{ color: "#a2a6a1" }}
+              >
+                문제에 직면하는 것을 두려워 하지 않고, <br />그 문제를 해결하기
+                위한 방법을 함께 고민하는 과정을 함께 배우며 성장할 수 있다고
+                믿고 있습니다. 그러기 위해서 커뮤니케이션을 무엇보다 중요시
+                하며, <br />
+                팀원들과의 시너지 효과를 만들어 내는 것을 즐깁니다.
+                <br />
               </p>
             </div>
             <div className="w-full mb-10">

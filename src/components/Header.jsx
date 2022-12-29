@@ -151,7 +151,7 @@ export default function Header({ handleClick }) {
                   vertical: "top",
                   horizontal: "right",
                 }}
-                getContentAnchorEl={null}
+                // getContentAnchorEl={null}
               >
                 <MenuItem onClick={() => menuHandleClick("home")}>
                   HOME
