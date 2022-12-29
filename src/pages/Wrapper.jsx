@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "../components/Footer";
-import { Link } from "react-scroll";
 import { forwardRef, useRef } from "react";
 
 function Wrapper() {

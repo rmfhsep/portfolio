@@ -1,6 +1,5 @@
 import React from "react";
 import { forwardRef } from "react";
-import { useState } from "react";
 
 function Footer({ props }, ref) {
   return (
