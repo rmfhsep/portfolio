@@ -366,7 +366,7 @@ function Projects({ props }, ref) {
               <div className="w-2/5">
                 <div className="mt-4">
                   <p className="text-indigo-400 text-sm sm:text-base font-semibold">
-                    Project
+                    Babayo Project
                   </p>
                   <p className="text-white text-2xl sm:text-4xl font-bold">
                     Admin
