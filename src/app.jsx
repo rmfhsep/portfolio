@@ -8,19 +8,7 @@ function App() {
   return (
     <Suspense fallback={<Spinner />}>
       <BrowserRouter>
-        <Wrapper></Wrapper>
-        {/* <Wrap>
-          {" "}
-          <Header
-            valueHandler={valueHandler}
-            setValue={setValue}
-            value={value}
-          />
-          <Home />
-          <About />
-          <Skiils />
-          <Footer />
-        </Wrap> */}
+        <Wrapper />
       </BrowserRouter>
     </Suspense>
   );
