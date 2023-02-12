@@ -15,6 +15,8 @@ export default function Header({ handleClick }) {
       handleClick("about");
     } else if (type === "skills") {
       handleClick("skills");
+    } else if (type === "works") {
+      handleClick("works");
     } else if (type === "projects") {
       handleClick("projects");
     } else if (type === "contact") {
@@ -90,24 +92,30 @@ export default function Header({ handleClick }) {
           </div>
           <div className="flex items-center">
             <nav className="hidden sm:block font-sen text-gray-800 dark:text-white uppercase text-lg sm:text-base sm:flex items-center">
-              <div
+              <a
                 onClick={() => handleClick("home")}
                 className="py-2 md:px-6 px-1 flex cursor-pointer"
               >
                 Home
-              </div>
-              <div
+              </a>
+              <a
                 onClick={() => handleClick("about")}
                 className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 About
-              </div>
-              <div
+              </a>
+              <a
                 onClick={() => handleClick("skills")}
                 className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 Skills
-              </div>
+              </a>
+              {/* <a
+                onClick={() => handleClick("works")}
+                className="py-2 md:px-6 px-2 flex cursor-pointer"
+              >
+                Works
+              </a> */}
               <a
                 onClick={() => handleClick("projects")}
                 className="py-2 md:px-6 px-2 flex cursor-pointer"
