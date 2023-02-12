@@ -110,12 +110,12 @@ export default function Header({ handleClick }) {
               >
                 Skills
               </a>
-              <a
+              {/* <a
                 onClick={() => handleClick("works")}
                 className="py-2 md:px-6 px-2 flex cursor-pointer"
               >
                 Works
-              </a>
+              </a> */}
               <a
                 onClick={() => handleClick("projects")}
                 className="py-2 md:px-6 px-2 flex cursor-pointer"
