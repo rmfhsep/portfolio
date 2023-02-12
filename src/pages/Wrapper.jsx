@@ -53,7 +53,7 @@ function Wrapper() {
           <Home ref={homeRef} name="home" />
           <About ref={aboutRef} name="about" />
           <Skills ref={skillsRef} name="skills" />
-          <Works ref={worksRef} name="works" />
+          {/* <Works ref={worksRef} name="works" /> */}
           <Projects ref={projectsRef} name="projects" />
           <Contact ref={contactRef} name="contact" />
 
