@@ -42,7 +42,10 @@ function Wrapper() {
 
   return (
     <>
-      <main className="bg-gray-800 bg-repeat relative h-screen">
+      <main
+        className="bg-gray-800 bg-repeat relative h-screen"
+        style={{ minWidth: "500px" }}
+      >
         {/* 헤더 */}
         <Header handleClick={handleClick} />
         {/* 내용 */}
