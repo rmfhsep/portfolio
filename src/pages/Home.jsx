@@ -49,7 +49,7 @@ function Home({ props }, ref) {
           {/* <span className="text-gray-300 sm:text-5xl">Frontend Developer</span> */}
           <p
             style={{ color: "#a2a6a1" }}
-            className="text-sm sm:text-base my-8 break-keep"
+            className="text-base sm:text-xl my-8 break-keep"
           >
             꾸준히 성장하자는 모토를 가지고, 항상 학습하며 배울 수 있는 것을
             찾기를 즐깁니다. <br />

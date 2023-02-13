@@ -144,7 +144,7 @@ export default function Header({ handleClick }) {
                 </div>
               </Button>
               <Menu
-                className="lg:hidden"
+                className="sm:hidden"
                 style={{ marginTop: "50px" }}
                 id="basic-menu"
                 anchorEl={anchorEl}

@@ -11,7 +11,7 @@ function Skills({ props }, ref) {
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
           <div className="w-full flex justify-center mt-10">
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -21,13 +21,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-base font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 HTML
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -37,13 +37,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 CSS
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -54,13 +54,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10  text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10  text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Tailwind
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -70,13 +70,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10  text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10  text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Javascript
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <g className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current">
                     <circle cx="64" cy="64" r="11.4"></circle>
@@ -86,7 +86,7 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 React
               </p>
@@ -95,7 +95,7 @@ function Skills({ props }, ref) {
           {/* ======== */}
           <div className="mt-10 w-full flex justify-center">
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -105,13 +105,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Next
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -121,13 +121,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Node
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg
                   style={{ color: "#a2a1a6" }}
                   role="img"
@@ -142,14 +142,14 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="sm:mt-10 mt-4 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="sm:mt-10 mt-4 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Express
               </p>
             </div>
 
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -159,13 +159,13 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Firebase
               </p>
             </div>
             <div className="w-1/5 items-center flex justify-start p-0 flex-col mb-4 mr-0 h-28 sm:h-auto">
-              <div className="w-16 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
+              <div className="w-10 sm:w-28 h-16 sm:h-20 group transition-all duration-200 ease-in-out transform translate-y-0 group hover:-translate-y-0 translate-x-0">
                 <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                   <path
                     className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
@@ -175,7 +175,7 @@ function Skills({ props }, ref) {
               </div>
               <p
                 style={{ color: "#a2a1a6" }}
-                className="mt-4 sm:mt-10 text-sm sm:text-sm font-semibold tracking-wide opacity-100 normal-case text-center"
+                className="mt-4 sm:mt-10 text-sm sm:text-xl font-semibold tracking-wide opacity-100 normal-case text-center hidden sm:block"
               >
                 Photoshop
               </p>
