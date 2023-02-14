@@ -99,7 +99,7 @@ function Wrapper() {
               </div>
               <div className="w-8 h-8 mb-4">
                 <a
-                  href="https://adventurous-bangle-8ec.notion.site/7265e5dd7ea648039fef0656b704bf12"
+                  href="https://my.surfit.io/w/561472517"
                   target="_blank"
                   rel="noreferrer"
                 >
