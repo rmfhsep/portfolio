@@ -51,8 +51,8 @@ function Home({ props }, ref) {
             style={{ color: "#a2a6a1" }}
             className="text-base sm:text-xl my-8 break-keep"
           >
-            꾸준히 성장하자는 모토를 가지고, 항상 학습하며 배울 수 있는 것을
-            찾기를 즐깁니다. <br />
+            편한 세상을 만들자는 모토를 가지고, 항상 학습하며 배울 수
+            있는 것을 찾기를 즐깁니다. <br />
             꾸준함이 성장하는 습관을 만들어 나갈 수 있다고 믿고 실천하고
             있습니다. <br />
             <br />
