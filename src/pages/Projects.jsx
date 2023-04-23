@@ -1,7 +1,32 @@
-import React, { forwardRef } from "react";
-
+import React, { forwardRef, useEffect, useState } from "react";
+import { useRef } from "react";
 // Todo. 작은화면일 때 flex col 로 바꾸기.
 function Projects({ props }, ref) {
+    const [isVisible, setIsVisible] = useState(false);
+    const aniRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(ref.current);
+          }
+        },
+        {
+          rootMargin: "0px",
+          threshold: 0.5,
+        }
+      );
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+      return () => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      };
+    }, []);
   return (
     <>
       <div
@@ -13,7 +38,11 @@ function Projects({ props }, ref) {
             My Projects
           </h1>
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-          <div className="w-full flex flex-col justify-center mt-10">
+          <div
+            className={`w-full flex flex-col justify-center mt-10 ${
+              isVisible ? "animate-fadeIn opacity-100" : "opacity-0"
+            } transition-opacity ${isVisible ? "duration-1000" : ""}`}
+          >
             {/* 첫번째 */}
             <div className="mt-10 flex flex-col md:flex-row box-border w-full p-3.5 bg-gray-700 rounded-md shadow-md shadow-light/10">
               <div className="md:w-3/5 w-full box-border flex justify-center items-center">
