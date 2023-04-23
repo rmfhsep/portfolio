@@ -1,7 +1,35 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { useRef } from "react";
 import { forwardRef } from "react";
 
 function About({ props }, ref) {
+  const [isVisible, setIsVisible] = useState(false);
+  const aniRef = useRef(null)
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(ref.current);
+        }
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.5,
+      }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div ref={ref} className="container p-16 flex relative min-h-screen">
@@ -10,7 +38,12 @@ function About({ props }, ref) {
             About
           </h1>
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-          <div className="flex flex-col-reverse items-start lg:flex-row pt-10 w-full">
+          <div
+            ref={aniRef}
+            className={`flex flex-col-reverse items-start lg:flex-row pt-10 w-full ${
+              isVisible ? "animate-fadeIn opacity-100" : "opacity-0"
+            } transition-opacity ${isVisible ? "duration-1000" : ""}`}
+          >
             {" "}
             <div
               className="w-full mr-10"

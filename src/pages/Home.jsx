@@ -49,11 +49,16 @@ function Home({ props }, ref) {
           {/* <span className="text-gray-300 sm:text-5xl">Frontend Developer</span> */}
           <p
             style={{ color: "#a2a6a1" }}
-            className="text-sm sm:text-base my-8 break-keep"
+            className="text-base sm:text-xl my-8 break-keep"
           >
+            웹을 통해 편한 세상을 만드는 개발자 김정훈입니다. <br />
+            꾸준함이 성장하는 습관을 만들어 나갈 수 있다고 믿고 실천하고
+            있습니다. <br />
+            <br />
             문제를 발견하면, 끝까지 해결하려고 노력하는 끈기 있는 개발자
             김정훈입니다. <br />
             함께 배우며 성장하기 위해 커뮤니케이션을 무엇보다 중요시 합니다.{" "}
+            <br />
             <br />
             오늘도 한 걸음 한 걸음 성장해 나가고 있습니다.
           </p>

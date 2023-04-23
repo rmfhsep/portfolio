@@ -6,11 +6,13 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "../components/Footer";
 import { forwardRef, useRef } from "react";
+import Works from "./Works";
 
 function Wrapper() {
   const homeRef = useRef();
   const aboutRef = useRef();
   const skillsRef = useRef();
+  const worksRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
 
@@ -23,6 +25,8 @@ function Wrapper() {
       elementPosition = aboutRef.current.offsetTop - headerOffset;
     } else if (type === "skills") {
       elementPosition = skillsRef.current.offsetTop - headerOffset;
+    } else if (type === "works") {
+      elementPosition = worksRef.current.offsetTop - headerOffset;
     } else if (type === "projects") {
       elementPosition = projectsRef.current.offsetTop - headerOffset;
     } else {
@@ -38,7 +42,10 @@ function Wrapper() {
 
   return (
     <>
-      <main className="bg-gray-800 bg-repeat relative h-screen">
+      <main
+        className="bg-gray-800 bg-repeat relative h-screen"
+        // style={{ minWidth: "500px" }}
+      >
         {/* 헤더 */}
         <Header handleClick={handleClick} />
         {/* 내용 */}
@@ -46,8 +53,10 @@ function Wrapper() {
           <Home ref={homeRef} name="home" />
           <About ref={aboutRef} name="about" />
           <Skills ref={skillsRef} name="skills" />
+          {/* <Works ref={worksRef} name="works" /> */}
           <Projects ref={projectsRef} name="projects" />
           <Contact ref={contactRef} name="contact" />
+
           <Footer />
         </div>
         <div className="fixed bottom-0 z-30 w-full">
@@ -90,7 +99,7 @@ function Wrapper() {
               </div>
               <div className="w-8 h-8 mb-4">
                 <a
-                  href="https://adventurous-bangle-8ec.notion.site/7265e5dd7ea648039fef0656b704bf12"
+                  href="https://my.surfit.io/w/561472517"
                   target="_blank"
                   rel="noreferrer"
                 >

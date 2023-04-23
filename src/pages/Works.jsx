@@ -1,32 +1,7 @@
-import React, { forwardRef, useEffect, useState } from "react";
-import { useRef } from "react";
-// Todo. 작은화면일 때 flex col 로 바꾸기.
-function Projects({ props }, ref) {
-    const [isVisible, setIsVisible] = useState(false);
-    const aniRef = useRef(null);
+import React, { forwardRef } from "react";
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(ref.current);
-          }
-        },
-        {
-          rootMargin: "0px",
-          threshold: 0.5,
-        }
-      );
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
-    }, []);
+// Todo. 작은화면일 때 flex col 로 바꾸기.
+function Works({ props }, ref) {
   return (
     <>
       <div
@@ -35,14 +10,10 @@ function Projects({ props }, ref) {
       >
         <div className="w-full flex flex-col relative z-20">
           <h1 className="font-bebas-neue text-5xl font-black flex flex-col  text-white">
-            My Projects
+            Works
           </h1>
           <hr className="bg-indigo-500 w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-          <div
-            className={`w-full flex flex-col justify-center mt-10 ${
-              isVisible ? "animate-fadeIn opacity-100" : "opacity-0"
-            } transition-opacity ${isVisible ? "duration-1000" : ""}`}
-          >
+          <div className="w-full flex flex-col justify-center mt-10">
             {/* 첫번째 */}
             <div className="mt-10 flex flex-col md:flex-row box-border w-full p-3.5 bg-gray-700 rounded-md shadow-md shadow-light/10">
               <div className="md:w-3/5 w-full box-border flex justify-center items-center">
@@ -92,10 +63,10 @@ function Projects({ props }, ref) {
               <div className="md:w-2/5 w-full flex justify-center">
                 <div className="mt-4">
                   <p className="text-indigo-400 text-sm sm:text-base font-semibold">
-                    Personal Project
+                    Ihq BaBayo
                   </p>
                   <p className="text-white text-2xl sm:text-4xl font-bold">
-                    Portfolio
+                    Backoffice
                   </p>
                   <hr className="bg-indigo-500 w-28 h-1.5 mt-4 mb-6 border-0"></hr>
                   <div className="flex sm:flex-col flex-row">
@@ -161,15 +132,17 @@ function Projects({ props }, ref) {
                       </p>
                     </div>
                   </div>
-
                   <p
                     style={{ color: "#a2a1a6" }}
-                    className="text-sm sm:text-base mt-10 break-keep"
+                    className="text-sm mt-10 break-keep"
                   >
                     개인 포트폴리오 사이트
                   </p>
                   <div className="flex">
-                    <a target="_blank" href="https://junghoon-portfolio.com">
+                    <a
+                      target="_blank"
+                      href="https://codestates.notion.site/16-The-Moon-moongori-3d9037535f4d40968c7e953a91a9e542"
+                    >
                       <button className="mt-4 h-10 p-3 inline-flex items-center rounded-md hover:-translate-y-1 hover:bg-opacity-40 bg-gray-800 group">
                         <svg
                           style={{ color: "a2a1a6" }}
@@ -190,7 +163,7 @@ function Projects({ props }, ref) {
                           style={{ color: "#a2a1a6" }}
                           className="font-semibold opacity-70 group-hover:opacity-100"
                         >
-                          Live
+                          Detail
                         </p>
                       </button>
                     </a>
@@ -238,16 +211,19 @@ function Projects({ props }, ref) {
                       ></circle>
                     </g>
                   </svg>
-                  <img style={{ height: "250px" }} src="./images/문고리.gif" />
+                  <img
+                    style={{ height: "250px" }}
+                    src="./images/portfolio.gif"
+                  />
                 </div>
               </div>
               <div className="md:w-2/5 w-full flex justify-center">
                 <div className="mt-4">
                   <p className="text-indigo-400 text-sm sm:text-base font-semibold">
-                    Team Project
+                    Ihq BaBayo
                   </p>
                   <p className="text-white text-2xl sm:text-4xl font-bold">
-                    moongori
+                    BaBayo Report
                   </p>
                   <hr className="bg-indigo-500 w-28 h-1.5 mt-4 mb-6 border-0"></hr>
                   <div className="flex sm:flex-col flex-row">
@@ -270,15 +246,16 @@ function Projects({ props }, ref) {
                         <svg style={{ color: "#a2a1a6" }} viewBox="0 0 128 128">
                           <path
                             className="dark:text-light text-mid transition-all duration-200 ease-in-out fill-current"
-                            d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063L108.33 26H19.67zm69.21 50.488L86.53 98.38l.009 1.875L64 106.55v.001l-.018.015-22.719-6.225L39.726 83h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495L77.702 77H51.795l-.222-2.355-.506-5.647L50.802 66h27.886l1.014-11H37.229l-.223-2.589-.506-6.03L36.235 43h55.597l-.267 3.334-2.685 30.154M89 14.374L81.851 6H89V1H73v4.363L81.39 13H73v5h16zm-19 0L63.193 6H70V1H55v4.363L62.733 13H55v5h15zM52 13h-8V6h8V1H38v17h14z"
+                            d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+                            fill="#38b2ac"
                           ></path>
                         </svg>
                       </div>
                       <p
                         style={{ color: "#a2a1a6" }}
-                        className="text-sm sm:text-base font-semibold tracking-wide hidden sm:block"
+                        className="ml-2 text-sm sm:text-base font-semibold tracking-wide hidden sm:block"
                       >
-                        CSS
+                        Tailwind
                       </p>
                     </div>
                     <div className="flex items-center mt-4">
@@ -314,10 +291,9 @@ function Projects({ props }, ref) {
                   </div>
                   <p
                     style={{ color: "#a2a1a6" }}
-                    className="text-sm sm:text-base mt-10 break-keep"
+                    className="text-sm mt-10 break-keep"
                   >
-                    기존 중고거래의 불편함을 해소하기 위한 <br />
-                    위치 기반 경매 플랫폼
+                    바바요 리포트 생성 및 알림 자동화
                   </p>
                   <div className="flex">
                     <a
@@ -344,7 +320,7 @@ function Projects({ props }, ref) {
                           style={{ color: "#a2a1a6" }}
                           className="font-semibold opacity-70 group-hover:opacity-100"
                         >
-                          Notion
+                          Detail
                         </p>
                       </button>
                     </a>
@@ -358,4 +334,4 @@ function Projects({ props }, ref) {
     </>
   );
 }
-export default forwardRef(Projects);
+export default forwardRef(Works);
